@@ -128,7 +128,7 @@ sed -i "/^STORAGE_BUCKET/s/.*/STORAGE_BUCKET=$storage_bucket/" .env
 sed -i "/^MESSAGING_SENDER_ID/s/.*/MESSAGING_SENDER_ID=$messaging_sender_id/" .env
 sed -i "/^APP_ID/s/.*/APP_ID=$app_id/" .env
 
-npm install -y pm2 -g
-pm2 start index.js --name MyZap By OwenZap
+npm install -y -g npm@latest pm2
+pm2 start index.js --name API_MyZap
 pm2 startup
 pm2 save
