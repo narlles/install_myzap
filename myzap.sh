@@ -129,5 +129,6 @@ sed -i "/^MESSAGING_SENDER_ID/s/.*/MESSAGING_SENDER_ID=$messaging_sender_id/" .e
 sed -i "/^APP_ID/s/.*/APP_ID=$app_id/" .env
 
 npm install -y pm2 -g
-pm2 start index.js
+pm2 start index.js --name MyZap By OwenZap
 pm2 startup
+pm2 save
