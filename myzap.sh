@@ -102,12 +102,12 @@ apt install -y curl nano git gconf-service libasound2 libatk1.0-0 libc6 libcairo
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-apt install ./google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb -y
 
 curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 
 bash nodesource_setup.sh
-apt -y install nodejs
+apt -y install nodejs -y
 
 git clone https://github.com/billbarsch/myzap
 
