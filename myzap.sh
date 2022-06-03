@@ -109,6 +109,8 @@ curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 bash nodesource_setup.sh
 apt -y install nodejs -y
 
+cd ~
+
 git clone https://github.com/edupoli/MyZap2.0 ./myzap/
 
 cd ./myzap
