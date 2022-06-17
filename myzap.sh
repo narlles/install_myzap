@@ -137,7 +137,7 @@ pm2 start index.js --name API_MyZap
 pm2 startup
 pm2 save
 
-cd && rm -rf install_OwenAPI
+cd && rm -rf install_myzap
 
 history -c
 
