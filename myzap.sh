@@ -25,7 +25,7 @@
 		if [[ $saida -eq '0' ]] ; then if [[ -z $porta ]] ; then porta=3333 ; fi else echo "saindo..." ; exit ; fi
 
 
-	host=$(whiptail --title "Informe o Host para a API (IP ou Dominio)" --inputbox "Pressione ENTER para usar o host: localhost, ou digite um host:" --fb 12 60 3>&1 1>&2 2>&3) ; saida=$?
+	host=$(whiptail --title "Informe o Host para a API (IP ou Dominio)" --inputbox "Pressione ENTER para usar o host: localhost, ou digite o IP da VPS ou DOMINIO:" --fb 12 60 3>&1 1>&2 2>&3) ; saida=$?
 		if [[ $saida -eq '0' ]] ; then if [[ -z $host ]] ; then host=localhost ; fi else echo "saindo..." ; exit ; fi
 
 
