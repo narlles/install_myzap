@@ -11,7 +11,7 @@
 	}
 
 
-	whiptail --title "Instalacao API MYZAP by OwenZap - (27 99236-9908)" --msgbox "Este Instalador automatico, permite instalar multiplas instancia do Myzap no mesmo servido, para isto a cada instalação der um nome diferent para a pasta e porta diferente na intalação. Aperte ENTER para iniciar a instalacao" --fb 10 70
+	whiptail --title "Instalacao API MYZAP by OwenZap - (27 99236-9908)" --msgbox "Este Instalador automatico de multiplas instancia do Myzap. Aperte ENTER para iniciar a instalacao" --fb 10 70
 	[[ $(whoami) != 'root' ]] && {
 		whiptail --title "Para continuar a instalacao, logue-se como ROOT" --msgbox "comando: su" --fb 10 70
 		exit;
