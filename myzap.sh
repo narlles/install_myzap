@@ -17,6 +17,10 @@
 		exit;
 	}
 
+        pasta=$(whiptail --title "Informe o nome para PASTA de intalação" --inputbox "Digite nome desejado para pasta da instalação:" --fb 12 60 3>&1 1>&2 2>&3) ; saida=$?
+		if [[ $saida -eq '0' ]] ; then if [[ -z $pasta ]] ; then pasta=myzap ; fi else echo "saindo..." ; exit ; fi
+
+
 	porta=$(whiptail --title "Defina a PORTA para a API" --inputbox "Pressione ENTER para usar a porta: 3333, ou digite uma porta:" --fb 12 60 3>&1 1>&2 2>&3) ; saida=$?
 		if [[ $saida -eq '0' ]] ; then if [[ -z $porta ]] ; then porta=3333 ; fi else echo "saindo..." ; exit ; fi
 
@@ -111,9 +115,9 @@ apt -y install nodejs -y
 
 cd ~
 
-git clone https://github.com/edupoli/MyZap2.0 ./myzap/
+git clone https://github.com/edupoli/MyZap2.0 ./${pasta}/
 
-cd ./myzap
+cd ./${pasta}
 
 npm install --allow-root --unsafe-perm=true
 
@@ -130,10 +134,10 @@ sed -i "/^STORAGE_BUCKET/s/.*/STORAGE_BUCKET=$storage_bucket/" .env
 sed -i "/^MESSAGING_SENDER_ID/s/.*/MESSAGING_SENDER_ID=$messaging_sender_id/" .env
 sed -i "/^APP_ID/s/.*/APP_ID=$app_id/" .env
 
-cd ~ && cd ./myzap
+cd ~ && cd ./${pasta}
 
 npm install -y -g npm@latest pm2
-pm2 start index.js --name API_MyZap
+pm2 start index.js --name API_${pasta}
 pm2 startup
 pm2 save
 
