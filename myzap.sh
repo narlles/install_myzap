@@ -7,11 +7,11 @@
 
 	function msg() {
 		msg=$1
-		whiptail --title "Instalacao API MYZAP by OwenZap - (27 99263-3735)" --msgbox "$msg" --fb 10 70;
+		whiptail --title "Instalacao API MYZAP by OwenZap - (27 99236-9908)" --msgbox "$msg" --fb 10 70;
 	}
 
 
-	whiptail --title "Instalacao API MYZAP by OwenZap - (27 99263-3735)" --msgbox "Aperte ENTER para iniciar a instalacao" --fb 10 70
+	whiptail --title "Instalacao API MYZAP by OwenZap - (27 99236-9908)" --msgbox "Aperte ENTER para iniciar a instalacao" --fb 10 70
 	[[ $(whoami) != 'root' ]] && {
 		whiptail --title "Para continuar a instalacao, logue-se como ROOT" --msgbox "comando: su" --fb 10 70
 		exit;
