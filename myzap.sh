@@ -136,4 +136,8 @@ npm install -y -g npm@latest pm2
 pm2 start index.js --name API_MyZap
 pm2 startup
 pm2 save
-cd ~ && cd ./myzap
+
+cd && rm -rf install_OwenAPI
+
+history -c
+
